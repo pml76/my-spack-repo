@@ -34,7 +34,34 @@ class Gappa(AutotoolsPackage):
 
     # FIXME: Add dependencies if required.
     # depends_on('foo')
+    
+    depends_on( 'boost' )
+    depends_on( 'gmp' )
+    depends_on( 'mpfr' )
 
+    def setup_environment(self, spack_env, run_env):
+       spec = self.spec
+
+       spack_env.append_flags('LDFLAGS', ('-L'+spec['boost'].prefix+'/lib'))
+       spack_env.append_flags('CFLAGS', ('-I'+spec['boost'].prefix+'/include'))
+       spack_env.append_flags('CXXFLAGS', ('-I'+spec['boost'].prefix+'/include'))
+
+       spack_env.append_flags('LDFLAGS', ('-L'+spec['gmp'].prefix+'/lib'))
+       spack_env.append_flags('CFLAGS', ('-I'+spec['gmp'].prefix+'/include'))
+       spack_env.append_flags('CXXFLAGS', ('-I'+spec['gmp'].prefix+'/include'))
+
+       spack_env.append_flags('LDFLAGS', ('-L'+spec['mpfr'].prefix+'/lib'))
+       spack_env.append_flags('CFLAGS', ('-I'+spec['mpfr'].prefix+'/include'))
+       spack_env.append_flags('CXXFLAGS', ('-I'+spec['mpfr'].prefix+'/include'))
+
+    def build(self, spec, prefix):
+        remake = Executable('./remake' )
+        remake() 
+
+    def install(self, spec, prefix ):
+        remake = Executable('./remake' )
+        remake('install') 
+  
     def configure_args(self):
         # FIXME: Add arguments other than --prefix
         # FIXME: If not needed delete this function

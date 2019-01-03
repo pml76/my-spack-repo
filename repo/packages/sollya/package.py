@@ -45,5 +45,10 @@ class Sollya(AutotoolsPackage):
     def configure_args(self):
         # FIXME: Add arguments other than --prefix
         # FIXME: If not needed delete this function
-        args = []
+        spec = self.spec
+        args = [ "--with-fplll=%s" % spec['fplll'].prefix,
+                 "--with-xml2=%s" % spec['libxml2'].prefix,
+                 "--with-gmp=%s" % spec['gmp'].prefix,
+                 "--with-mpfr=%s" % spec['mpfr'].prefix,
+                 "--with-mpfi=%s" % spec['mpfi'].prefix ]
         return args

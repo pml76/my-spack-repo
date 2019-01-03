@@ -36,6 +36,13 @@ class Mpfi(AutotoolsPackage):
     # FIXME: Add dependencies if required.
     # depends_on('foo')
     depends_on( 'gmp' )
+    depends_on( 'mpfr' )
+
+    depends_on( 'm4')
+    depends_on( 'libtool' )
+    depends_on( 'automake' )
+    depends_on( 'autoconf' )
+
 
     @property
     def configure_directory(self):
@@ -44,6 +51,8 @@ class Mpfi(AutotoolsPackage):
     def configure_args(self):
         # FIXME: Add arguments other than --prefix
         # FIXME: If not needed delete this function
-        args = []
+        spec = self.spec
+        args = [ "--with-mpfr=%s" % spec['mpfr'].prefix,
+                 "--with-gmp=%s" % spec['gmp'].prefix ]
         return args
 
