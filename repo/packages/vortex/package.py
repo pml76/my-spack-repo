@@ -32,8 +32,6 @@ class Vortex(CMakePackage):
     depends_on('qt-postgres')
     depends_on('catch2')
     depends_on('trompeloeil')
-    depends_on('sollya')
-    depends_on('gappa')
 
     # use compiler and debugger supplied by spack
     depends_on('gcc+binutils')
