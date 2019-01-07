@@ -17,7 +17,7 @@ class Vortex(CMakePackage):
     transitive_rpaths = True
 
     # depends_on('dealii +mpi')
-    depends_on('root')
+    # depends_on('root')
     depends_on("openssl@1.0.2p")
     depends_on('arblib')
     depends_on('gmp')
@@ -25,11 +25,9 @@ class Vortex(CMakePackage):
     depends_on('erfa')
     depends_on('boost@1.63.0 +mpi')
     depends_on('hdf5 +cxx +hl +szip +mpi')
-    depends_on('intel-tbb')
+    # depends_on('intel-tbb')
     depends_on('cmake')
     depends_on('doxygen +graphviz')
-    depends_on('postgresql')
-    depends_on('qt-postgres')
     depends_on('catch2')
     depends_on('trompeloeil')
 
