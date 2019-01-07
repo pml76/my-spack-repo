@@ -17,7 +17,7 @@ class Vortex(CMakePackage):
     transitive_rpaths = True
 
     # depends_on('dealii +mpi')
-    # depends_on('root')
+    depends_on('root')
     depends_on("openssl@1.0.2p")
     depends_on('arblib')
     depends_on('gmp')
@@ -30,6 +30,7 @@ class Vortex(CMakePackage):
     depends_on('doxygen +graphviz')
     depends_on('catch2')
     depends_on('trompeloeil')
+    depends_on('gsl')
 
     # use compiler and debugger supplied by spack
     depends_on('gcc+binutils')
