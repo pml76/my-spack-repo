@@ -31,6 +31,18 @@ class Vortex(CMakePackage):
     depends_on('catch2')
     depends_on('trompeloeil')
     depends_on('gsl')
+    depends_on('netcdf +parallel-netcdf +mpi')
+    depends_on('netcdf-cxx4')
+    # depends_on('python')
+    # depends_on('py-pandas')
+    # depends_on('py-xarray')
+    # depends_on('py-netcdf4')
+    # depends_on('py-setuptools')
+    # depends_on('py-pytables')
+    depends_on('r')
+    depends_on('r-rcpp')
+    depends_on('r-ncdf4')
+    # depends_on('adios2 +adios1 +hdf5 +mpi')
 
     # use compiler and debugger supplied by spack
     depends_on('gcc +binutils')

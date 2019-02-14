@@ -8,7 +8,7 @@ class Pricer(CMakePackage):
     url = ""
 
     version('development', git='https://github.com/pml76/Pricer.git', 
-             branch='master', url='https://github.com/pml76/Pricer/archive/master.zip')
+             branch='master')
 
     extends('python')
 
@@ -34,6 +34,7 @@ class Pricer(CMakePackage):
     depends_on('gsl')
     depends_on('sleef')
     depends_on('vc')
+    depends_on('ccache')
 
     # use compiler and debugger supplied by spack
     depends_on('gcc languages="c,c++,go,jit,lto,fortran"')
