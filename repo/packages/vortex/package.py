@@ -40,6 +40,7 @@ class Vortex(CMakePackage):
     # depends_on('py-setuptools')
     # depends_on('py-pytables')
     depends_on('r')
+    depends_on('rstudio')
     depends_on('r-rcpp')
     depends_on('r-ncdf4')
     # depends_on('adios2 +adios1 +hdf5 +mpi')
