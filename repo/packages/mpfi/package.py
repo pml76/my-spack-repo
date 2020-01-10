@@ -42,6 +42,7 @@ class Mpfi(AutotoolsPackage):
     depends_on( 'libtool' )
     depends_on( 'automake' )
     depends_on( 'autoconf' )
+    depends_on( 'texinfo' )
 
 
     @property
