@@ -30,6 +30,7 @@ class Googlebenchmark(CMakePackage):
     homepage = "http://www.example.com"
     url      = "https://github.com/google/benchmark/archive/v1.4.1.zip"
 
+    version('1.5.0', sha256='2d22dd3758afee43842bb504af1a8385cccb3ee1f164824e4837c1c1b04d92a0')
     version('1.4.1', sha256='61ae07eb5d4a0b02753419eb17a82b7d322786bb36ab62bd3df331a4d47c00a7')
     version('1.4.0', sha256='7f5f3608c9228fa023151a4b54e91f4ada4b7b49c26facede6c5b8b83ddbedad')
     version('1.3.0', sha256='51c2d2d35491aea83aa6121afc4a1fd9262fbd5ad679eb5e03c9fa481e42571e')
@@ -41,9 +42,11 @@ class Googlebenchmark(CMakePackage):
     depends_on('googletest +gmock')
 
     def cmake_args(self):
+        spec = self.spec
         # FIXME: Add arguments other than
         # FIXME: CMAKE_INSTALL_PREFIX and CMAKE_BUILD_TYPE
         # FIXME: If not needed delete this function
         args = ['-DCMAKE_BUILD_TYPE=RELEASE', 
-                '-DCMAKE_POSITION_INDEPENDENT_CODE=ON']
+                '-DBENCHMARK_ENABLE_GTEST_TESTS=OFF',
+                '-DBENCHMARK_ENABLE_TESTING=OFF']
         return args

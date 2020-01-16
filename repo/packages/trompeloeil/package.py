@@ -46,7 +46,8 @@ class Trompeloeil(CMakePackage):
     # FIXME: Add a proper url for your package's homepage here.
     homepage = "http://www.example.com"
     url      = "https://github.com/rollbear/trompeloeil/archive/v32.zip"
-
+    
+    version('36', '6a0f5de53e897aa038d50e06569d7c77')
     version('32', 'a4b6d352d9d512c77f62fbde7c53788a')
     version('31', 'f2243bb8773a24da4dea0f40fe97bf14')
     version('30', '1b6688116e7d474ca6d27a5c0396d1ca')
