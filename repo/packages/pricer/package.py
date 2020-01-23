@@ -36,6 +36,7 @@ class Pricer(CMakePackage):
     depends_on('vc')
     depends_on('ccache')
     depends_on('nasm')
+    depends_on('cli11')
 
     # use compiler and debugger supplied by spack
     depends_on('gcc languages="c,c++,go,jit,lto,fortran"')
