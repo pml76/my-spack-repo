@@ -18,6 +18,7 @@ class Pricer(CMakePackage):
 
     depends_on('openssl')
 
+    depends_on('intel-ipp')
     depends_on('intel-mkl')
     depends_on('arblib')
     depends_on('gmp')

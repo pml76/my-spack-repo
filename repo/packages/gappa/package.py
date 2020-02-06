@@ -28,9 +28,10 @@ class Gappa(AutotoolsPackage):
 
     # FIXME: Add a proper url for your package's homepage here.
     homepage = "http://www.example.com"
-    url      = "https://gforge.inria.fr/frs/download.php/file/37624/gappa-1.3.3.tar.gz"
+    url      = "https://gforge.inria.fr/frs/download.php/file/38044/gappa-1.3.5.tar.gz"
+    # url      = "https://gforge.inria.fr/frs/download.php/file/37624/gappa-1.3.3.tar.gz"
 
-    version('1.3.3', sha256='1c88d2ae96cd88a49af37393d06e92ffa20abdc8b170830fcdcde03ae8208e44')
+    version('1.3.5', sha256='fc80c87f95e7141a95965807e46b50e82f20eefc6179a55c5cda1989796c3c60')
 
     # FIXME: Add dependencies if required.
     # depends_on('foo')

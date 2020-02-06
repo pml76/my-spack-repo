@@ -28,9 +28,9 @@ class Sollya(AutotoolsPackage):
 
     # FIXME: Add a proper url for your package's homepage here.
     homepage = "http://www.example.com"
-    url      = "https://gforge.inria.fr/frs/download.php/file/37748/sollya-7.0.tar.bz2"
+    url      = "file://localhost/home/peter/my-spack-repo/tars/sollya.tar.gz"
 
-    version('7.0', sha256='15745871f7dd3e96e12915098dd6df2078b815853a38143b2bc6c01477044984')
+    version('7.0', sha256='fa40a17d3f837ac852f403e96b5404708601ec40e80a3ff6768e0cc008fad3c2')
 
     # FIXME: Add dependencies if required.
     # depends_on('foo')
