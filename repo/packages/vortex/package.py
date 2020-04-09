@@ -7,8 +7,8 @@ class Vortex(CMakePackage):
     homepage = ""
     url = ""
 
-    version('development', git='file://localhost/home/VortexUser/Projects/RootVortex/', 
-             branch='development')
+    version('master', git='file://localhost/home/VortexUser/Projects/RootVortex/', 
+             branch='master')
 
     extends('python')
 
@@ -40,7 +40,7 @@ class Vortex(CMakePackage):
     # depends_on('py-setuptools')
     # depends_on('py-pytables')
     depends_on('r')
-    depends_on('rstudio')
+    # depends_on('rstudio')
     depends_on('r-rcpp')
     depends_on('r-ncdf4')
     # depends_on('adios2 +adios1 +hdf5 +mpi')
@@ -49,12 +49,13 @@ class Vortex(CMakePackage):
     depends_on('gcc +binutils')
     depends_on('llvm +clang')
     depends_on('gdb')
+    depends_on('quantlib')
 
 
     def cmake_args(self):
         spec = self.spec
         options = []
-        options.extend(['BOOST_DIR=%s' % spec['boost'].prefix])
+        # options.extend(['BOOST_DIR=%s' % spec['boost'].prefix])
         return options
 
 

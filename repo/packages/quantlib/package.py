@@ -33,7 +33,8 @@ class Quantlib(CMakePackage):
     version('1.18', sha256='ed60ef34d614f737db490a1408a249d6aef266fb96e700eb7ca2b7978734dc89')
 
     # FIXME: Add dependencies if required.
-    depends_on('boost')
+    depends_on('boost +mpi')
+    depends_on('gcc +binutils')
 
     def cmake_args(self):
         # FIXME: Add arguments other than
