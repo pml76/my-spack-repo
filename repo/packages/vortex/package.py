@@ -23,15 +23,15 @@ class Vortex(CMakePackage):
     depends_on('gmp')
     depends_on('mpfr')
     depends_on('erfa')
-    depends_on('boost')
-    depends_on('hdf5 +cxx +hl +szip')
+    depends_on('boost +mpi')
+    depends_on('hdf5 +cxx +hl +szip +mpi')
     # depends_on('intel-tbb')
     depends_on('cmake')
     depends_on('doxygen +graphviz')
     depends_on('catch2')
     depends_on('trompeloeil')
     depends_on('gsl')
-    depends_on('netcdf +parallel-netcdf')
+    depends_on('netcdf-c +mpi')
     depends_on('netcdf-cxx4')
     # depends_on('python')
     # depends_on('py-pandas')
@@ -47,7 +47,7 @@ class Vortex(CMakePackage):
 
     # use compiler and debugger supplied by spack
     depends_on('gcc +binutils')
-    depends_on('llvm +clang')
+    depends_on('llvm +clang+libcxx+compiler-rt+gold+polly+internal_unwind')
     depends_on('gdb')
     depends_on('quantlib')
 
