@@ -1,0 +1,22 @@
+diff --git a/library/openxlsx/CMakeLists.txt b/library/openxlsx/CMakeLists.txt
+index 4306559..7d5176d 100644
+--- a/library/openxlsx/CMakeLists.txt
++++ b/library/openxlsx/CMakeLists.txt
+@@ -215,10 +215,11 @@ file(COPY ${CMAKE_CURRENT_BINARY_DIR}/openxlsx_export.h DESTINATION ${OPENXLSX_I
+ #=======================================================================================================================
+ # Install OpenXLSX Library
+ #=======================================================================================================================
+-#include(GNUInstallDirs)
+-#install(TARGETS OpenXLSX
+-#        ARCHIVE DESTINATION ${CMAKE_INSTALL_LIBDIR}${INSTALL_SUFFIX}
+-#        LIBRARY DESTINATION ${CMAKE_INSTALL_LIBDIR}${INSTALL_SUFFIX}
+-#        RUNTIME DESTINATION ${CMAKE_INSTALL_BINDIR})
+-#install(FILES ${OPENXLSX_HEADERS} DESTINATION ${CMAKE_INSTALL_INCLUDEDIR}/OpenXLSX)
++include(GNUInstallDirs)
++install(TARGETS OpenXLSX
++        ARCHIVE DESTINATION ${CMAKE_INSTALL_LIBDIR}${INSTALL_SUFFIX}
++        LIBRARY DESTINATION ${CMAKE_INSTALL_LIBDIR}${INSTALL_SUFFIX}
++        RUNTIME DESTINATION ${CMAKE_INSTALL_BINDIR})
++install(FILES ${OPENXLSX_CXX_INTERFACE_HEADERS} DESTINATION ${CMAKE_INSTALL_INCLUDEDIR}/OpenXLSX)
++install(FILES ${CMAKE_CURRENT_BINARY_DIR}/openxlsx_export.h DESTINATION ${CMAKE_INSTALL_INCLUDEDIR}/OpenXLSX)
+ 
