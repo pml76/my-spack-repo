@@ -6,9 +6,9 @@ class Vortex(CMakePackage):
 
     homepage = ""
     url = ""
+    git = "https://github.com/pml76/Vortex.git"
 
-    version('master', git='file://localhost/home/VortexUser/Projects/RootVortex/', 
-             branch='master')
+    version('master', branch='master')
 
     extends('python')
 
@@ -20,6 +20,9 @@ class Vortex(CMakePackage):
     # depends_on('root')
     # depends_on("openssl@1.0.2p")
     depends_on('arblib')
+    depends_on('fmt')
+    depends_on('xlnt@1.5.0')
+    depends_on('openxlsx')
     depends_on('gmp')
     depends_on('mpfr')
     depends_on('erfa')
@@ -54,7 +57,7 @@ class Vortex(CMakePackage):
 
     def cmake_args(self):
         spec = self.spec
-        options = []
+        options = ['-DCMAKE_EXE_LINKER_FLAGS=-fuse-ld=gold']
         # options.extend(['BOOST_DIR=%s' % spec['boost'].prefix])
         return options
 

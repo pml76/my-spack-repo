@@ -46,8 +46,9 @@ class Catch2(CMakePackage):
     # FIXME: Add a proper url for your package's homepage here.
     homepage = "http://www.example.com"
     url      = "https://github.com/catchorg/Catch2/archive/v2.2.2.zip"
-    
-    version('2.11.1',  '5a51ffb60a578246e9e7e9879a203022')
+ 
+    version('2.13.8', '78148e1a75aea786038fb8d21b9455f2')
+    version('2.11.1', '5a51ffb60a578246e9e7e9879a203022')
     version('2.5.0',  '7e2fde0308b6e1116bff1922c86b16a9')
     version('2.2.2',  'a4ecf9b2acf29fe02ded85d57951b573')
     version('2.2.1',  'd1324482a68cdce904a75ae83c74ec73')
