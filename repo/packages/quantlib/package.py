@@ -28,9 +28,10 @@ class Quantlib(CMakePackage):
 
     # FIXME: Add a proper url for your package's homepage here.
     homepage = "http://www.example.com"
-    url      = "https://github.com/lballabio/QuantLib/archive/QuantLib-v1.18.tar.gz"
+    url      = "https://github.com/lballabio/QuantLib/archive/QuantLib-v1.28.tar.gz"
 
-    version('1.18', sha256='ed60ef34d614f737db490a1408a249d6aef266fb96e700eb7ca2b7978734dc89')
+    version('1.28', sha256='0104a85e737b3451aa2782ac09ca158804c9e9c333ce74bfcdf64d47f20b7aa7')
+    # version('1.18', sha256='ed60ef34d614f737db490a1408a249d6aef266fb96e700eb7ca2b7978734dc89')
 
     # FIXME: Add dependencies if required.
     depends_on('boost +mpi')

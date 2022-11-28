@@ -21,7 +21,7 @@ class Vortex(CMakePackage):
     # depends_on("openssl@1.0.2p")
     depends_on('arblib')
     depends_on('fmt')
-    depends_on('xlnt@1.5.0')
+    # depends_on('xlnt@1.5.0')
     depends_on('openxlsx')
     depends_on('gmp')
     depends_on('mpfr')
@@ -46,19 +46,22 @@ class Vortex(CMakePackage):
     # depends_on('rstudio')
     depends_on('r-rcpp')
     depends_on('r-ncdf4')
+    depends_on('r-openxlsx')
     # depends_on('adios2 +adios1 +hdf5 +mpi')
 
     # use compiler and debugger supplied by spack
-    depends_on('gcc +binutils')
+    # depends_on('gcc +binutils')
     depends_on('llvm +clang+libcxx+compiler-rt+gold+polly+internal_unwind')
     depends_on('gdb')
     depends_on('quantlib')
+    depends_on("ncurses")
+    depends_on("zlib")
 
 
-    def cmake_args(self):
-        spec = self.spec
-        options = ['-DCMAKE_EXE_LINKER_FLAGS=-fuse-ld=gold']
+ #   def cmake_args(self):
+ #       spec = self.spec
+        # options = ['-DCMAKE_EXE_LINKER_FLAGS=-fuse-ld=gold']
         # options.extend(['BOOST_DIR=%s' % spec['boost'].prefix])
-        return options
+ #       return options
 
 
